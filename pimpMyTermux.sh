@@ -41,20 +41,16 @@ apt install zsh -y
 # sudo pacman -S mandoc --noconfirm
 
 zsh -c "
-echo \"Testing convenience...\";
+echo "Running freshly installed ZSHELL...";
 sleep 5;
-for msg in \"Just switched to zsh.\" \"Now we gotta go back and fix some stuff for a clean end.\" \"Heading back...\"; do
-  echo \"\$msg\";
-  sleep 5;
-done;
-echo \"Just checking your shell's identity, which is: \$SHELL\";
-echo \"Well, I guess if BASH is where we are at, keep on kicking it!\";
-echo \"We mean no harm here, hun <3.\";
-echo \"I don't know what you've heard about me, but it's just the marvelous shell's name ;)\";
+echo "Just switched to zsh.";
+sleep 3;
+echo "The purpose of this fresh ZSHELL execution is to generate necessary config files.";
 sleep 5;
-
-echo \"Alright, let's get back to pimping your Termux...\";
-sleep 5
+echo "Now we gotta go back and fix some stuff for a clean end.";
+sleep 5;
+echo "Heading back...";
+sleep 5;
 "
 echo
 echo "Downloading and installing Oh My Zsh..."
@@ -69,7 +65,7 @@ sleep 5
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions || true
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting || true
 echo
-echo "Done setting up Oh My Zsh!"
+echo "Done setting up Oh My Zsh!" 
 sleep 5
 echo
 echo "For the plugins to work as they should,"
@@ -91,13 +87,12 @@ echo
 echo "Aren't you as fresh as a cold breeze now? (⌐■_■)"
 echo
 echo "Now, giving you all the rights of freshness..."
-if command -v su >/dev/null 2>&1; then
-  su -c "echo 'The roots of heaven are now yours. May you make the best of it! (⌐■_■)'" && 
-  sleep 5 && 
-  exit 0
-fi
+su -c "echo 'The roots of heaven are now yours. May you make the best of it! (⌐■_■) && sleep 5 && exit'"
 echo
 echo "All done!"
+echo "--------------------------------------"
+echo
+
 # ERROR HANDLING - #1
 # The $ZSH folder may already exist (/data/data/com.termux/files/home/.oh-my-zsh)
 # FEAT +1: Increase sleep 5imes for better reading
